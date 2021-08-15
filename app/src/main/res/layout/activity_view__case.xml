@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".View_Case">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!--TOP PORTION-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                >
+
+                <!--    APP NAME & LINE-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crash\nInvestigation App"
+                        android:textAlignment="center"
+                        android:textColor="#494949"
+                        android:textSize="15pt"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        />
+
+                    <!--    LINE-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1pt"
+                        android:layout_marginTop="10dp"
+                        android:background="#808080"
+                        />
+
+                </LinearLayout>
+
+                <!--        EYE ICON AND TEXT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/eye_icon"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Case"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+                        android:textColor="#6B6B6B"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--MIDDLE PORTION-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Case_Recycler_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                />
+
+            <TextView
+                android:id="@+id/No_Case_Found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Any Case Found"
+                android:textSize="22dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="#F5C42E"
+                android:layout_marginTop="10pt"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_icon"
+        android:background="@drawable/yellow_bg"
+        android:padding="8pt"
+        android:layout_marginTop="2pt"
+        android:layout_marginStart="2pt"
+        android:elevation="2pt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15pt"
+        android:layout_marginEnd="10pt"
+        android:onClick="Add_new_click"
+        />
+
+
+
+
+</RelativeLayout>

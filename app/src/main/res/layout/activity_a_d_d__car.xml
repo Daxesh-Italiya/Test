@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ADD_Car">
+
+    <ScrollView
+        android:id="@+id/list_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8F8F8"
+            android:orientation="vertical">
+            <!--TOP PORTION-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:layout_marginLeft="10pt"
+                android:layout_marginRight="10pt"
+                android:layout_marginBottom="10pt"
+                android:orientation="vertical">
+
+                <!--    CASE TEXT & CHECK ICON-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="15pt"
+                        android:layout_height="15pt"
+                        android:layout_marginRight="3pt"
+                        android:src="@drawable/car_icon" />
+
+                    <TextView
+                        android:id="@+id/Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Car 1"
+                        android:textColor="#494949"
+                        android:textSize="15pt"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="15pt"
+                        android:layout_height="15pt"
+                        android:layout_marginRight="3pt"
+                        android:src="@drawable/check_mark"
+                        android:onClick="Save_Click"/>
+
+                </LinearLayout>
+
+                <!--    LINE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:background="#BFBFBF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Car_Image_Page"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--         SINGLE ELEMENT OF CAR-->
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginRight="10pt"
+                        android:layout_marginBottom="5pt"
+                        android:layout_marginTop="2pt"
+                        android:background="@drawable/car_light_bg"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:onClick="Image1_Click"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="30dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/Car1"
+                                android:layout_width="100pt"
+                                android:layout_height="50pt"
+                                android:src="@drawable/car_left_view" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="35sp"
+                                    android:layout_height="30sp"
+                                    android:src="@drawable/ic_camera_icon" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="Left Side"
+                                    android:gravity="bottom"
+                                    android:textColor="#4E4D4D"
+                                    android:textSize="25sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/Image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120pt"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_marginBottom="5pt"
+                    android:layout_marginTop="2pt"
+                    android:background="@drawable/car_light_bg"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/Car2"
+                            android:layout_width="100pt"
+                            android:layout_height="50pt"
+                            android:src="@drawable/car_right_view" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35sp"
+                                android:layout_height="30sp"
+                                android:src="@drawable/ic_camera_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Right Side"
+                                android:gravity="bottom"
+                                android:textColor="#4E4D4D"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/Image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="Image2_Click"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120pt"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_marginBottom="5pt"
+                    android:layout_marginTop="2pt"
+                    android:background="@drawable/car_light_bg"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/Car3"
+                            android:layout_width="100pt"
+                            android:layout_height="50pt"
+                            android:src="@drawable/car_front_view" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5pt"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35sp"
+                                android:layout_height="30sp"
+                                android:src="@drawable/ic_camera_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Front Side"
+                                android:gravity="bottom"
+                                android:textColor="#4E4D4D"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/Image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="Image3_Click"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120pt"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_marginBottom="5pt"
+                    android:layout_marginTop="2pt"
+                    android:background="@drawable/car_light_bg"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/Car4"
+                            android:layout_width="100pt"
+                            android:layout_height="50pt"
+                            android:src="@drawable/car_back_view" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="5pt"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35sp"
+                                android:layout_height="30sp"
+                                android:src="@drawable/ic_camera_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Rear Side"
+                                android:gravity="bottom"
+                                android:textColor="#4E4D4D"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/Image4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="Image4_Click"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Person_Image_Page"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--         SINGLE ELEMENT OF CAR-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120pt"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_marginBottom="5pt"
+                    android:layout_marginTop="2pt"
+                    android:background="@drawable/car_light_bg"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:onClick="P_Image1_Click"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/P_view1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/person1"
+                            android:layout_width="50pt"
+                            android:layout_height="80pt"
+                            android:src="@drawable/above_abdominal" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="5pt"
+                                android:text="Above\nAbdomen"
+                                android:textColor="#4E4D4D"
+                                android:textSize="25sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/P_Image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2pt"
+                        android:layout_marginBottom="2pt"
+                        android:rotation="90"
+                       />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120pt"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:layout_marginBottom="5pt"
+                    android:layout_marginTop="2pt"
+                    android:background="@drawable/car_light_bg"
+                    android:elevation="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:onClick="P_Image2_Click"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/P_view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:id="@+id/person2"
+                            android:layout_width="50pt"
+                            android:layout_height="80pt"
+                            android:src="@drawable/below_abdomen" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="5pt"
+                                android:text="Below\nAbdomen"
+                                android:textColor="#4E4D4D"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/P_Image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2pt"
+                        android:layout_marginBottom="2pt"
+                        android:rotation="90"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/camera_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <FrameLayout
+            android:id="@+id/View_finder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/GUID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20pt"
+            />
+
+        <ImageView
+            android:id="@+id/car_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/guid_car_left"
+            android:layout_marginTop="50pt"
+            android:layout_marginBottom="55pt"
+            android:layout_marginStart="20pt"
+            android:layout_marginEnd="20pt"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@drawable/yellow_bg"
+            android:gravity="center"
+            android:onClick="Capture"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10pt"
+            android:elevation="2pt"
+            >
+            <ImageView
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:src="@drawable/camara_icon"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

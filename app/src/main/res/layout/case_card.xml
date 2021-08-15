@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="3pt">
+    <LinearLayout
+        android:id="@+id/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/car_background"
+        android:orientation="horizontal"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:elevation="2pt"
+        android:layout_marginTop="2pt"
+        android:layout_marginBottom="2pt"
+        >
+        <ImageView
+            android:id="@+id/car_icon"
+            android:layout_width="15pt"
+            android:layout_height="15pt"
+            android:src="@drawable/brown_car_icon"
+            android:layout_marginTop="7pt"
+            android:layout_marginBottom="7pt"
+            android:layout_marginStart="15pt"
+            />
+        <TextView
+            android:id="@+id/Case_name"
+            android:layout_marginTop="5pt"
+            android:layout_marginBottom="5pt"
+            android:textColor="#4E4D4D"
+            android:textSize="10pt"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5pt"
+            android:text="Case1"
+            android:layout_marginStart="5pt"
+            android:layout_marginEnd="5pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>
